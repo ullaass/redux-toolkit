@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addProducts } from '../redux/slices/productSlice';
+import { addToCart } from '../redux/slices/cartSlice';
 
 const Home = () => {
 
@@ -38,7 +39,8 @@ const Home = () => {
                             </span>
                             <p className='text-sm'>{product.description.slice(0,50)}... </p>
                             {/* <h3 className='text-right'> Rs {product.price}</h3> */}
-                            <button className='bg-yellow-500 w-full font-bold'>
+                            <button className='bg-yellow-500 w-full font-bold'
+                                    onChange={()=> dispatch(addToCart(product))}>
                                 Add To Cart
                             </button>
                         </div>
