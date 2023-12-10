@@ -24,7 +24,7 @@ const Cart = () => {
                                 <span className='text-yellow-500'>Rs{product.price}</span>
                             </span>
                             <p className='text-sm'>{product.description.slice(0,50)}... </p>
-                            {/* <h3 className='text-right'> Rs {product.price}</h3> */}
+                            
                             <button className='bg-yellow-500 w-full font-bold'
                                     onChange={()=> dispatch(removeFromCart(product))}>
                                 Remove To Cart
